@@ -1,0 +1,120 @@
+<html>
+<head>
+<link rel="stylesheet" href="manpage.css"><title>tDOM manual: tDOM Overview</title><meta name="xsl-processor" content="Jochen Loewer (loewerj@hotmail.com), Rolf Ade (rolf@pointsman.de) et. al."><meta name="generator" content="$RCSfile: tmml-html.xsl,v $ $Revision: 1.7 $">
+</head><body>
+<div class="header">
+<div class="navbar" align="center">
+<a href="#SECTid0x80a8258">NAME</a> · <a href="#SECTid0x80e3c50">Introduction</a> · <a href="#SECTid0x80bca38">Licence</a> · <a href="#SECTid0x80bcd98">Documentation</a> · <a href="#SECTid0x80bd158">Downloads</a> · <a href="#SECTid0x80bde28">GitHub</a> · <a href="#SECTid0x80d3140">Mailing List</a> · <a href="#SECTid0x80d3490">Further Readings</a>
+</div><hr class="navsep">
+</div><div class="body">
+  <h2><a name="SECTid0x80a8258">NAME</a></h2><p class="namesection">
+<b class="names">tDOM Overview - </b><br>Introduction and download information</p>
+  <h2><a name="SECTid0x80e3c50">Introduction</a></h2><p>tDOM combines high performance XML data processing with easy and
+powerful Tcl scripting functionality. tDOM should be one of the fastest ways to
+manipulate XML with a scripting language and uses very little memory in the process (for example
+the DOM tree of the XML recommendation in XML (160K) needs only about 450K in
+memory)! The tDOM project was started by Jochen Löwer. It is currently
+maintained by Rolf Ade.</p><p>tDOM contains:</p><ul>
+
+      <li>the newest version of Expat, the XML parser from James Clark,
+including namesspace and DTD support.</li>
+
+      <li>a modified version of Steve Ball's Tclexpat, the Tcl interface to
+expat, for event-like (SAX-like) XML parsing. The modifications are for
+performance improvements, to make the newest Expat features (XML namespace)
+available and for some additional features.</li>
+
+      <li>a (partial) DOM I and II implementation in C for maximum performance
+and minimum memory need following the W3C DOM Core Level 1 and Level 2
+recommendations using, at users choice, a OO-like or a token based
+syntax.</li>
+
+      <li>a very complete, compliant and fast XPath implementation in C
+following the November 99 W3C recommendation.</li>
+
+      <li>a very fast XSLT implementation in C following the W3C Recommendation
+16 November 1999 -- it's (as of Jan. 2003) very probably the fastest available
+open source XSLT implementation, especially for bigger source files.</li>
+
+      <li>still support for tcl8.0.5 (with UTF-8 to 8 bit encoding back conversion functionality)</li>
+
+      <li>an efficient and Tcl'ish way to create XML and HTML document.</li>
+
+      <li>an HTML-parser (builds DOM directly, not as tolerant as Tidy).</li>
+
+      <li>optional DTD validation</li>
+
+      <li>additional convenience methods</li>
+
+      <li>documentation in TMML, HTML and nroff format</li>
+    </ul><p>and some more.</p>
+
+  <h2><a name="SECTid0x80bca38">Licence</a></h2><p>The tDOM specific source files come with the Mozilla Public License 
+Version 1.1.</p><p>For the Expat XML parser package license see the file COPYING in the
+directory expat of the source distribution. In short, it's a liberal Open
+Source license.</p>
+
+  <h2><a name="SECTid0x80bcd98">Documentation</a></h2><p>The documentation is included into the source distribution (in HTML and
+      man  page format) and the Windos binary distribution (in HTML
+      format). Alternatively, find the <a href="doc-index.html">Table of
+        Contents</a> here on the web site.</p>
+
+  <h2><a name="SECTid0x80bd158">Downloads</a></h2><p>The latest tDOM source release is <a href="files/tDOM-0.8.3.tgz">tDOM-0.8.3</a> (967k gzip tar archive)</p>
+<p>tDOM-0.8.2 is also avaliable as <a href="files/tDOM-0.8.2-win32.zip">win32 DLLs</a> (267k zip archive, 2007-08-14)</p><p>tDOM is included into ActiveStates <a href="http://aspn.activestate.com/ASPN/Downloads/ActiveTcl/">ActiveTcl</a> (a 'batteries included' binary Tcl/Tk distribution, avaliable for several plattforms) as well as into Daniel Steffen <a href="http://tcltkaqua.sourceforge.net/">Tcl/Tk Aqua</a> (a 'batteries included' binary distribution of the Mac OS X native Tcl/Tk)</p><p>Bernard Desgraupes provides <a href="http://webperso.easyconnect.fr/bdesgraupes/tcl.html#tdomlib">Mac
+binaries</a> for OS X as well as for Mac Classic (OS 8/9).</p><p>If you want to use a tDOM Starkit, there are either Chuck Ferrils <a href="http://wcferril.home.mchsi.com/index.html">tdom.kit</a> (it
+supports Linux, FreeBSD and MS Windows) or the tcl extension
+collection <a href="http://www.equi4.com/kitten">kitten.kit</a>, which also
+includes tDOM.</p>
+
+  <h2><a name="SECTid0x80bde28">GitHub</a></h2><p>The tDOM GitHub respository is available at <a href="http://github.com/makr/tdom">http://github.com/makr/tdom</a></p>
+
+  <h2><a name="SECTid0x80d3140">Mailing List</a></h2><p>The place for tDOM related discussions and questions is the tDOM mailing
+list. See <a href="http://groups.yahoo.com/group/tdom/">http://groups.yahoo.com/group/tdom/</a> for the archive and subscribing information.</p>
+
+  <h2><a name="SECTid0x80d3490">Further Readings</a></h2><p>Beside this overview and the included documentation there are a few
+other articles and papers with information about tDOM.</p><dl>
+      
+        <dt><a href="http://www.tu-harburg.de/skf/tcltk/papers2000/tDOM3.pdf">tDOM - A
+fast XML/DOM/XPath package for Tcl written in C</a></dt>
+        <dd>This pdf document (1800 kByte, 19 pages) was written by the tDOM
+author Jochen Löwer on the occasion of his talk about tDOM at the First
+European Tcl/Tk User Meeting (15. Juni 2000) in Hamburg/Harburg. This paper
+treats tDOM Version 0.5a2 and is therefor a little bit outdated. But it's still
+the best available introduction into tDOMs architecture.</dd>
+      
+
+      
+        <dt><a href="documents/tclum2001-tdom.zip">tDOM - Update</a></dt>
+        <dd>This pdf document includes the
+sheets of Jochen Löwers talk about tDOM held at the Second European Tcl/Tk User
+(7. Juli 2001). This talk was an "update" to Jochens talk at the First European
+Tcl/Tk User Meeting and therefor reflects the news and changes since 0.5a2 up
+to 0.63.</dd>
+      
+
+      
+        <dt><a href="http://www-106.ibm.com/developerworks/xml/library/x-tdom.html">A high-performance Tcl-scripted XSLT engine</a></dt>
+        <dd>This IBM developerWorks article by Cameron Laird gives an short
+overview over some of tDOMs features, compares the parsing and DOM building
+speed of tDOM with some popular Java implementation and features a 'dual level'
+ design of building applications using XML technologies glued together with
+scripting.</dd>
+      
+      
+
+      
+        <dt><a href="http://www.linuxjournal.com/article.php?sid=5622">XSLT Powers a New Wave of Web Applications</a></dt>
+        <dd>This LinuxJournal article by Cameron Laird gives a short high level
+introduction into XSLT. The article presents its examples in terms of the tDOM engine.</dd>
+      
+    </dl>
+</div><div class="footer">
+<hr class="navsep"><!-- footer.html: Standard navigational footer --><div class="navbar" align="center">
+        <a class="navaid" href="index.html">tDOM Overview</a>
+ ·	<a class="navaid" href="doc-index.html">Table of Contents</a>
+ ·	<a class="navaid" href="category-index.html">Index</a>
+ ·	<a class="navaid" href="keyword-index.html">Keywords</a>
+</div>
+</div>
+</body>
+</html>
